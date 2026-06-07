@@ -1,0 +1,29 @@
+@use "_variables" as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-shadow($y: 10px, $blur: 22px, $alpha: 0.08) {
+  box-shadow: 0 $y $blur rgba(15, 23, 42, $alpha);
+  border-radius: $card-radius;
+  background: #fff;
+}

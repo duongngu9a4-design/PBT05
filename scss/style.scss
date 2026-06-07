@@ -1,0 +1,89 @@
+@use "sass:color";
+@use "_variables" as *;
+@use "_mixins" as *;
+@use "_components" as *;
+
+// Mobile-first base
+* { box-sizing: border-box; }
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: $font-primary;
+	font-size: 16px;
+	color: #111827;
+	background: #f7fafc;
+}
+
+// Utilities
+%container-base {
+	padding-left: $spacing-md;
+	padding-right: $spacing-md;
+}
+
+// Header
+.site-header {
+	@extend %container-base;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: $spacing-md;
+	padding-bottom: $spacing-md;
+	background: #fff;
+	border-bottom: 1px solid color.adjust($muted-color, $lightness: 40%);
+}
+
+.brand {
+	color: $primary-color;
+	font-weight: 700;
+	font-size: 1.125rem;
+}
+
+// Main layout
+.page-content {
+	@extend %container-base;
+	padding-top: $spacing-md;
+	padding-bottom: $spacing-lg;
+	display: grid;
+	gap: $spacing-md;
+}
+
+// Sidebar hidden on mobile; shown via mixin at breakpoints
+.sidebar { display: none; }
+
+// Product grid uses the component partial
+.product-grid {
+	@extend .product-grid;
+}
+
+// Card alias to component partial
+.card {
+	@extend .card;
+}
+
+// Footer
+.site-footer {
+	text-align: center;
+	padding: $spacing-md 0;
+	color: $muted-color;
+	background: #fff;
+	border-top: 1px solid color.adjust($muted-color, $lightness: 40%);
+}
+
+// Responsive adjustments
+@include respond-to(tablet) {
+	html, body { font-size: 17px; }
+	.site-header { padding-left: $spacing-lg; padding-right: $spacing-lg; }
+	.page-content {
+		grid-template-columns: 1fr 320px; /* main + sidebar stacked at tablet */
+		gap: $spacing-lg;
+	}
+	.sidebar { display: block; }
+}
+
+@include respond-to(desktop) {
+	html, body { font-size: 18px; }
+	.page-content {
+		grid-template-columns: 240px minmax(0, 1fr) 220px; /* sidebar + main + ads */
+		gap: 2rem;
+	}
+}

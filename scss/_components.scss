@@ -1,0 +1,68 @@
+@use "sass:color";
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.card {
+  @include card-shadow();
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .card-image {
+    overflow: hidden;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.45s ease;
+    }
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+    margin: $spacing-md 0 $spacing-sm;
+  }
+
+    &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+
+    .card-image img {
+      transform: scale(1.05);
+    }
+  }
+
+  &.featured {
+    border: 2px solid $secondary-color;
+  }
+
+  button {
+    @include flex-center;
+    margin: $spacing-md auto $spacing-md;
+    display: inline-flex;
+    padding: $spacing-sm $spacing-md;
+    border-radius: 8px;
+    background: $primary-color;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.03);
+      background: color.adjust($primary-color, $lightness: -6%);
+    }
+  }
+}
+
+.product-grid {
+  display: grid;
+  gap: $spacing-md;
+  grid-template-columns: 1fr;
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
