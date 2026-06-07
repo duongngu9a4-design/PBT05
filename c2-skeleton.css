@@ -1,0 +1,95 @@
+/* C2 Responsive Skeleton for Restaurant Reservation Page */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.page {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header,
+.hero,
+.gallery,
+.booking-form,
+.map,
+.footer {
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  min-height: 320px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.booking-form {
+  display: grid;
+  gap: 12px;
+}
+
+.map {
+  min-height: 240px;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .page {
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "hero hero"
+      "gallery booking"
+      "gallery map"
+      "footer footer";
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .gallery {
+    grid-area: gallery;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .booking-form {
+    grid-area: booking;
+  }
+
+  .map {
+    grid-area: map;
+  }
+
+  .footer {
+    grid-area: footer;
+  }
+}
