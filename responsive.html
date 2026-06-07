@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Product Page</title>
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">ShopTLU</div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="menu-toggle" aria-label="Open navigation">☰</label>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khuyến mãi</a></li>
+        <li><a href="#">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <h2>Bộ lọc</h2>
+        <label>
+          Danh mục
+          <select>
+            <option>Toàn bộ</option>
+            <option>Thời trang</option>
+            <option>Đồ điện tử</option>
+            <option>Gia dụng</option>
+          </select>
+        </label>
+        <label>
+          Mức giá
+          <select>
+            <option>Tất cả</option>
+            <option>Dưới 500K</option>
+            <option>500K - 1 triệu</option>
+            <option>Trên 1 triệu</option>
+          </select>
+        </label>
+        <button type="button">Áp dụng bộ lọc</button>
+      </div>
+    </aside>
+
+    <section class="product-area">
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%201%3C/text%3E%3C/svg%3E" alt="Product 1">
+          <div class="product-info">
+            <h3>Áo phông nam</h3>
+            <p>Chất liệu cotton mềm mại, form chuẩn.</p>
+            <span class="price">₫299.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%202%3C/text%3E%3C/svg%3E" alt="Product 2">
+          <div class="product-info">
+            <h3>Tai nghe Bluetooth</h3>
+            <p>Âm thanh rõ nét, pin lâu.</p>
+            <span class="price">₫499.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%203%3C/text%3E%3C/svg%3E" alt="Product 3">
+          <div class="product-info">
+            <h3>Đồng hồ thông minh</h3>
+            <p>Theo dõi sức khỏe, chống nước.</p>
+            <span class="price">₫1.199.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%204%3C/text%3E%3C/svg%3E" alt="Product 4">
+          <div class="product-info">
+            <h3>Túi xách nữ</h3>
+            <p>Thiết kế trẻ trung, nhiều ngăn.</p>
+            <span class="price">₫699.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%205%3C/text%3E%3C/svg%3E" alt="Product 5">
+          <div class="product-info">
+            <h3>Giày thể thao</h3>
+            <p>Êm chân, đế bám tốt.</p>
+            <span class="price">₫899.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%206%3C/text%3E%3C/svg%3E" alt="Product 6">
+          <div class="product-info">
+            <h3>Balo du lịch</h3>
+            <p>Chống thấm, dung tích rộng.</p>
+            <span class="price">₫749.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%207%3C/text%3E%3C/svg%3E" alt="Product 7">
+          <div class="product-info">
+            <h3>Đèn bàn LED</h3>
+            <p>Ánh sáng dịu, tiết kiệm điện.</p>
+            <span class="price">₫349.000</span>
+          </div>
+        </article>
+        <article class="product-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect width='600' height='400' fill='%23e8e8e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='44' fill='%23666'%3EProduct%208%3C/text%3E%3C/svg%3E" alt="Product 8">
+          <div class="product-info">
+            <h3>Ly giữ nhiệt</h3>
+            <p>Giữ ấm lâu, thiết kế nhỏ gọn.</p>
+            <span class="price">₫249.000</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ads-bar">
+      <div class="ads-card">
+        <h2>Ưu đãi nổi bật</h2>
+        <p>Giảm giá đến 30% cho đơn hàng đầu tiên.</p>
+        <a href="#">Xem chi tiết</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2026 ShopTLU. Responsive product page demo.</p>
+  </footer>
+</body>
+</html>
