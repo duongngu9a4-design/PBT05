@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations Demo</title>
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+  <header class="header">
+    <div>
+      <h1>Shop Animation</h1>
+      <p>Demo CSS transitions và animations.</p>
+    </div>
+    <div class="spinner" aria-label="Loading"></div>
+  </header>
+
+  <main class="content">
+    <section class="intro fade-in">
+      <h2>Hiệu ứng CSS có sẵn</h2>
+      <p>Nghĩa là không cần JavaScript để tạo chuyển động mượt cho card, nút, ảnh và hiệu ứng xuất hiện.</p>
+    </section>
+
+    <section class="product-grid">
+      <article class="product-card fade-in">
+        <div class="product-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='330'%3E%3Crect width='500' height='330' fill='%23dbe7ff'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='36' fill='%23344'%3ESản phẩm 1%3C/text%3E%3C/svg%3E" alt="Sản phẩm 1">
+        </div>
+        <h3>Áo khoác mùa đông</h3>
+        <p>Ấm áp, thời trang và bền bỉ cho mùa lạnh.</p>
+        <button type="button">Mua ngay</button>
+      </article>
+
+      <article class="product-card fade-in" style="animation-delay: 0.1s;">
+        <div class="product-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='330'%3E%3Crect width='500' height='330' fill='%23ffe4d6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='36' fill='%23344'%3ESản phẩm 2%3C/text%3E%3C/svg%3E" alt="Sản phẩm 2">
+        </div>
+        <h3>Tai nghe không dây</h3>
+        <p>Âm thanh sống động, kết nối nhanh và pin lâu.</p>
+        <button type="button">Mua ngay</button>
+      </article>
+
+      <article class="product-card fade-in" style="animation-delay: 0.2s;">
+        <div class="product-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='330'%3E%3Crect width='500' height='330' fill='%23e6ffd8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='36' fill='%23344'%3ESản phẩm 3%3C/text%3E%3C/svg%3E" alt="Sản phẩm 3">
+        </div>
+        <h3>Đồng hồ thông minh</h3>
+        <p>Theo dõi sức khỏe, hiển thị thông báo và cá tính.</p>
+        <button type="button">Mua ngay</button>
+      </article>
+
+      <article class="product-card fade-in" style="animation-delay: 0.3s;">
+        <div class="product-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='330'%3E%3Crect width='500' height='330' fill='%23fff5b5'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='36' fill='%23344'%3ESản phẩm 4%3C/text%3E%3C/svg%3E" alt="Sản phẩm 4">
+        </div>
+        <h3>Túi xách thời trang</h3>
+        <p>Kiểu dáng thanh lịch, phù hợp đi làm và đi chơi.</p>
+        <button type="button">Mua ngay</button>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
